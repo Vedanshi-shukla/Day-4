@@ -10,7 +10,6 @@ function debounce(func, delay) {
     };
 }
 
-// Function to handle search and display results
 function handleSearch(event) {
     const searchText = event.target.value.toLowerCase();
     const resultElement = document.getElementById('searchResult');
@@ -25,8 +24,6 @@ function handleSearch(event) {
         });
     }
 }
-
-// Get the search input element and attach the debounced handler
 const searchInput = document.getElementById('search');
 const debouncedSearch = debounce(handleSearch, 300);
 searchInput.addEventListener('input', debouncedSearch);
